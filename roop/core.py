@@ -149,7 +149,7 @@ def start() -> None:
             update_status('Processing to image failed!')
         return
     # process image to videos
-    if predict_video(roop.globals.target_path):
+    #if predict_video(roop.globals.target_path):
         #destroy()
     update_status('Creating temporary resources...')
     create_temp(roop.globals.target_path)
