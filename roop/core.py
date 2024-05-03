@@ -149,11 +149,12 @@ def start() -> None:
             update_status('Processing to image failed!')
         return
     # process image to videos
-    #if predict_video(roop.globals.target_path):
-        #destroy()
+    if predict_video(roop.globals.target_path):
+        print("test faiked")
+        destroy()
     update_status('Creating temporary resources...')
     create_temp(roop.globals.target_path)
-    # extract frames
+    # extract frame
     if roop.globals.keep_fps:
         fps = detect_fps(roop.globals.target_path)
         update_status(f'Extracting frames with {fps} FPS...')
